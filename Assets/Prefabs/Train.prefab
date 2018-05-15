@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4603530429384218}
   - component: {fileID: 33644115387640400}
-  - component: {fileID: 136565872653282146}
   - component: {fileID: 23531489410467404}
   m_Layer: 0
   m_Name: Cylinder (3)
@@ -38,7 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4234070097783474}
   - component: {fileID: 33334443646316824}
-  - component: {fileID: 136854122721417692}
   - component: {fileID: 23301099917173362}
   m_Layer: 0
   m_Name: Cylinder (5)
@@ -56,7 +54,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4314208086628904}
   - component: {fileID: 33731082708541376}
-  - component: {fileID: 136940253962340666}
   - component: {fileID: 23075169269397218}
   m_Layer: 0
   m_Name: Cylinder (2)
@@ -74,7 +71,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4306495136116786}
   - component: {fileID: 33420069973688102}
-  - component: {fileID: 136113764060328742}
   - component: {fileID: 23934684347360414}
   m_Layer: 0
   m_Name: Cylinder (7)
@@ -92,7 +88,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4276925224241174}
   - component: {fileID: 33008220775981854}
-  - component: {fileID: 136987752541973246}
   - component: {fileID: 23673737686158436}
   m_Layer: 0
   m_Name: Cylinder (6)
@@ -110,7 +105,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4986943789861196}
   - component: {fileID: 33353792114416292}
-  - component: {fileID: 136882552085396686}
   - component: {fileID: 23509811752710426}
   m_Layer: 0
   m_Name: Cylinder (4)
@@ -146,7 +140,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4265968935604306}
   - component: {fileID: 33834998045512852}
-  - component: {fileID: 136854818433138486}
   - component: {fileID: 23720299651729702}
   m_Layer: 0
   m_Name: Cylinder (8)
@@ -605,95 +598,4 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136113764060328742
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1408683935343872}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136565872653282146
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1069551166130812}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136854122721417692
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1084497294358416}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136854818433138486
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1626577983206284}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136882552085396686
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1569219981587780}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136940253962340666
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1182923069633410}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136987752541973246
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1555731577029976}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
