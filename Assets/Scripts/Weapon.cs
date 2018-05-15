@@ -13,6 +13,14 @@ public class Weapon : MonoBehaviour {
     public float maxRotation = 360.0f;
     public float minRotation = 0.0f;
 
+
+    [Header("Weapon Properties")]
+    public float bulletSpeed = 5.0f;
+    public float bulletDamage = 1.0f;
+    [Range(0.01f, 1.0f)] public float fireRate = 1.0f;
+
+    private float _fireRateCount = 0.0f;
+
     private Transform _pTransform;
 
     private Camera _camera;
@@ -22,8 +30,9 @@ public class Weapon : MonoBehaviour {
     private float _aimAngle;
 
     public GameObject bulletPrefab;
-    public GameObject bulletSpawn;
+    public Transform bulletSpawn;
 
+    private bool _isShooting = false;
 
     //// USED FOR DEBUG DRAWING (previously used to check forward facing vector location/direction)
     //void OnDrawGizmos()
@@ -64,12 +73,47 @@ public class Weapon : MonoBehaviour {
             }
         }
 
+        // Increment the shooting timer if required
+        if (_isShooting)
+        {
+            _fireRateCount += Time.deltaTime;
+            if (_fireRateCount > fireRate)
+            {
+                _isShooting = false;
+            }
+        }
+
+
     }
 
 
     public void Shoot()
     {
-        print("Shoot!");
+        _isShooting = true;
+
+        if (_fireRateCount > fireRate)
+        {
+            _fireRateCount = 0;
+        }
+        if (_fireRateCount == 0)
+        {
+            //print("Shoot!");
+
+            GameObject newProjectile = Instantiate(bulletPrefab, bulletSpawn.transform.position, _pTransform.transform.rotation);
+            Projectile projectile = newProjectile.GetComponent<Projectile>();
+
+            projectile.Init(bulletDamage, bulletSpeed, _pTransform.position + _pTransform.forward * 1000.0f);
+
+            //// Create the Bullet from the Bullet Prefab
+            //var _bullet = (GameObject)Instantiate(
+            //    bulletPrefab,
+            //    bulletSpawn.position,
+            //    bulletSpawn.rotation);
+
+            // Destroy the bullet after 2 seconds
+            Destroy(newProjectile, 2.0f);
+        }
+
     }
 }
 

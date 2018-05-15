@@ -207,9 +207,12 @@ MonoBehaviour:
   shouldRotate: 0
   maxRotation: 240
   minRotation: 120
+  bulletSpeed: 5
+  bulletDamage: 1
+  fireRate: 1
   bulletPrefab: {fileID: 1087128554650730, guid: 3725dc6977c4bae49b79814f10817ea0,
     type: 2}
-  bulletSpawn: {fileID: 1247986252394448}
+  bulletSpawn: {fileID: 4544734551936200}
 --- !u!136 &136298150619310774
 CapsuleCollider:
   m_ObjectHideFlags: 1
