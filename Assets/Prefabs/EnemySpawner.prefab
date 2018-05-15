@@ -54,4 +54,5 @@ MonoBehaviour:
   objectsToSpawn:
   - {fileID: 1005188311686376, guid: a3608dfe295d69444a843d8c8a1dd689, type: 2}
   spawnDelayMinMax: {x: 0.5, y: 2}
-  isInfinite: 0
+  maxAmountOfEntitys: 10
+  isInfinite: 1

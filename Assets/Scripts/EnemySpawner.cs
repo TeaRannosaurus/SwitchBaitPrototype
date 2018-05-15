@@ -22,6 +22,7 @@ public class EnemySpawner : MonoBehaviour
         while ((maxAmountOfEntitys < entityCounter) || isInfinite)
         {
             GameObject newEntity = GameObject.Instantiate(objectsToSpawn[Random.Range(0, objectsToSpawn.Count)], transform.position, Quaternion.identity);
+            newEntity.GetComponent<EnemyController>().target = GameObject.FindObjectOfType<PlayerController>().transform;
 
             entityCounter--;
             yield return new WaitForSeconds(Random.Range(spawnDelayMinMax.x, spawnDelayMinMax.y));
