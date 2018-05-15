@@ -207,7 +207,7 @@ MonoBehaviour:
   shouldRotate: 0
   maxRotation: 360
   minRotation: 0
-  bulletSpeed: 20
+  bulletSpeed: 1000
   bulletDamage: 100
   fireRate: 0.1
   bulletPrefab: {fileID: 1087128554650730, guid: 3725dc6977c4bae49b79814f10817ea0,

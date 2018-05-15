@@ -102,7 +102,8 @@ public class Weapon : MonoBehaviour {
             GameObject newProjectile = Instantiate(bulletPrefab, bulletSpawn.transform.position, _pTransform.transform.rotation);
             Projectile projectile = newProjectile.GetComponent<Projectile>();
 
-            projectile.Init(bulletDamage, bulletSpeed, _pTransform.position + _pTransform.forward * 1000.0f);
+            projectile.Init(bulletDamage, bulletSpeed, _pTransform.parent.GetComponent<TrainController>().currentVelocity);
+            //print(_pTransform.parent.GetComponent<TrainController>().currentVelocity);
 
             //// Create the Bullet from the Bullet Prefab
             //var _bullet = (GameObject)Instantiate(

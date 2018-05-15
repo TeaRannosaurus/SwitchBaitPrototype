@@ -14,6 +14,8 @@ public class TrainController : MonoBehaviour
     private NavMeshAgent _agent;
     private List<Transform> _waypoints = new List<Transform>();
 
+    [HideInInspector] public Vector3 currentVelocity;
+
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
@@ -30,6 +32,9 @@ public class TrainController : MonoBehaviour
     private void FixedUpdate()
     {
         NavigateToWaypoint();
+
+        currentVelocity = _agent.velocity;
+        
     }
 
     public void NavigateToWaypoint()

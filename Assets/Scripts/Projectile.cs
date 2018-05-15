@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour {
     public float damage;
     //public float splashRadius;
     public float travelSpeed;
-    public Vector3 moveDir;
+    public Vector3 startSpeed;
 
     private bool _hasBeenTriggered = false;
 
@@ -16,14 +16,15 @@ public class Projectile : MonoBehaviour {
         _hasBeenTriggered = false;
     }
 
-    public void Init(float Damage, float TravelSpeed, Vector3 MoveDir)
+    public void Init(float Damage, float TravelSpeed, Vector3 CurrentSpeed)
     {
         damage = Damage;
         travelSpeed = TravelSpeed;
-        moveDir = MoveDir;
+        startSpeed = CurrentSpeed;
 
         // Give the bullet a force
-        transform.GetComponent<Rigidbody>().velocity = transform.forward * travelSpeed;
+        transform.GetComponent<Rigidbody>().velocity = startSpeed;
+        transform.GetComponent<Rigidbody>().AddForce(transform.forward * travelSpeed);
 
     }
 
