@@ -27,6 +27,11 @@ public class EnemyController : MonoBehaviour, IDamagable
         _agent.destination = target.position;
     }
 
+    private void Update()
+    {
+        _agent.destination = target.position;
+    }
+
 	public void TakeDamage(int amount)
 	{
 	    _currentHealth -= amount;
