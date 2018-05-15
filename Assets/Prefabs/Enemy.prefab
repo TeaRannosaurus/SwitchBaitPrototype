@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4135710889750706}
   - component: {fileID: 114325784703469352}
   - component: {fileID: 195834094266330052}
+  - component: {fileID: 65488498477968662}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,8 +68,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005188311686376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.67, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -17.26, y: 3.14, z: -6.290777}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4166497921044908}
   m_Father: {fileID: 0}
@@ -114,7 +115,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1a16f27d9d8136c44b93a3e439aa3770, type: 3}
   m_StaticBatchInfo:
@@ -143,6 +143,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1731379967195784}
   m_Mesh: {fileID: 4300000, guid: 1a16f27d9d8136c44b93a3e439aa3770, type: 3}
+--- !u!65 &65488498477968662
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1005188311686376}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 3.5, z: 1.5}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!114 &114325784703469352
 MonoBehaviour:
   m_ObjectHideFlags: 1

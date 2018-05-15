@@ -41,19 +41,14 @@ public class Projectile : MonoBehaviour {
 
         _hasBeenTriggered = true;
         
-        // if (other.transform == target)
+        if (other.tag == "Enemy")
+        {
+            other.GetComponent<EnemyController>().TakeDamage((int)damage);
+        }
         // {
             //other.GetComponent<EnemyBase>().TakeDamage(damage);
         //     OnHitEnemy();
         // }
             //GameObject[] enemyObjects = GameObject.FindGameObjectsWithTag("Enemy");
     }
-
-    private void OnHitEnemy()
-    {
-        //m_soundEffectManager.PlaySound(m_hitSounds);
-        //GetComponent<MeshRenderer>().enabled = false;
-        Destroy(gameObject, 0.5f);
-    }
-
 }

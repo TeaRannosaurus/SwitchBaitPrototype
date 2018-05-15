@@ -205,9 +205,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldRotate: 0
-  maxRotation: 240
-  minRotation: 120
-  bulletSpeed: 5
+  maxRotation: 360
+  minRotation: 0
+  bulletSpeed: 20
   bulletDamage: 1
   fireRate: 1
   bulletPrefab: {fileID: 1087128554650730, guid: 3725dc6977c4bae49b79814f10817ea0,
