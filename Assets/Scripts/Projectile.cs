@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour {
     
     [Header("Visable but untweakable Properties")]
     public float damage;
+    public float spread;
     //public float splashRadius;
     public float travelSpeed;
     public Vector3 startSpeed;
@@ -16,15 +17,19 @@ public class Projectile : MonoBehaviour {
         _hasBeenTriggered = false;
     }
 
-    public void Init(float Damage, float TravelSpeed, Vector3 CurrentSpeed)
+    public void Init(float Damage, float TravelSpeed, float Spread, Vector3 CurrentSpeed)
     {
         damage = Damage;
+        spread = Spread;
         travelSpeed = TravelSpeed;
         startSpeed = CurrentSpeed;
 
         // Give the bullet a force
         transform.GetComponent<Rigidbody>().velocity = startSpeed;
-        transform.GetComponent<Rigidbody>().AddForce(transform.forward * travelSpeed);
+
+        Vector3 newDir = new Vector3(transform.forward.x + Random.Range(0.0f, spread), transform.forward.y + Random.Range(0.0f, spread), transform.forward.z + Random.Range(0.0f, spread)).normalized;
+
+        transform.GetComponent<Rigidbody>().AddForce(newDir * travelSpeed);
 
     }
 

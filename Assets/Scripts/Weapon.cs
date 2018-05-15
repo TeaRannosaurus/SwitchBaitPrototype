@@ -18,6 +18,7 @@ public class Weapon : MonoBehaviour {
     public float bulletSpeed = 5.0f;
     public float bulletDamage = 1.0f;
     [Range(0.01f, 1.0f)] public float fireRate = 1.0f;
+    [Range(0.01f, 0.5f)] public float bulletSpread = 0.2f;
 
     private float _fireRateCount = 0.0f;
 
@@ -102,7 +103,7 @@ public class Weapon : MonoBehaviour {
             GameObject newProjectile = Instantiate(bulletPrefab, bulletSpawn.transform.position, _pTransform.transform.rotation);
             Projectile projectile = newProjectile.GetComponent<Projectile>();
 
-            projectile.Init(bulletDamage, bulletSpeed, _pTransform.parent.GetComponent<TrainController>().currentVelocity);
+            projectile.Init(bulletDamage, bulletSpeed, bulletSpread, _pTransform.parent.GetComponent<TrainController>().currentVelocity);
             //print(_pTransform.parent.GetComponent<TrainController>().currentVelocity);
 
             //// Create the Bullet from the Bullet Prefab
