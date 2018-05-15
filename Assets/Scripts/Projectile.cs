@@ -21,6 +21,10 @@ public class Projectile : MonoBehaviour {
         damage = Damage;
         travelSpeed = TravelSpeed;
         moveDir = MoveDir;
+
+        // Give the bullet a force
+        transform.GetComponent<Rigidbody>().velocity = transform.forward * travelSpeed;
+
     }
 
     void Update () {
@@ -30,25 +34,24 @@ public class Projectile : MonoBehaviour {
             return;
         }*/
 
-        float step = travelSpeed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, moveDir, step);
+        //float step = travelSpeed * Time.deltaTime;
+        //transform.position = Vector3.MoveTowards(transform.position, moveDir, step);
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        if (_hasBeenTriggered)
-            return;
+        //print("Something Hit!");
+        //if (_hasBeenTriggered)
+        //    return;
 
-        _hasBeenTriggered = true;
+        //_hasBeenTriggered = true;
         
         if (other.tag == "Enemy")
         {
+            print("Enemy Hit!");
             other.GetComponent<EnemyController>().TakeDamage((int)damage);
+            Destroy(gameObject); 
         }
-        // {
-            //other.GetComponent<EnemyBase>().TakeDamage(damage);
-        //     OnHitEnemy();
-        // }
-            //GameObject[] enemyObjects = GameObject.FindGameObjectsWithTag("Enemy");
+
     }
 }
