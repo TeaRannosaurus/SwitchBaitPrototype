@@ -38,7 +38,7 @@ public class TrainController : MonoBehaviour
         {
             if(_agent.remainingDistance <= _agent.stoppingDistance)
             {
-                if(!_agent.hasPath || _agent.velocity.sqrMagnitude == 0.5f)
+                if(!_agent.hasPath || _agent.velocity.sqrMagnitude == 0.0f)
                 {
                     _waypointIndex++;
                 }
