@@ -41,6 +41,10 @@ public class TrainController : MonoBehaviour
                 if(!_agent.hasPath || _agent.velocity.sqrMagnitude == 0.0f)
                 {
                     _waypointIndex++;
+                    _agent.SetDestination(_waypoints[_waypointIndex].position);
+
+                    if (_waypointIndex > waypointContainer.childCount)
+                        _waypointIndex = 0;
                 }
             }
         }
