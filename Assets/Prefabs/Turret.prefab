@@ -117,6 +117,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -151,6 +152,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -207,9 +209,10 @@ MonoBehaviour:
   shouldRotate: 0
   maxRotation: 360
   minRotation: 0
-  bulletSpeed: 1000
+  bulletSpeed: 20000
   bulletDamage: 100
   fireRate: 0.1
+  bulletSpread: 0.2
   bulletPrefab: {fileID: 1087128554650730, guid: 3725dc6977c4bae49b79814f10817ea0,
     type: 2}
   bulletSpawn: {fileID: 4544734551936200}

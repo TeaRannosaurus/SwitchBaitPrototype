@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour, IDamagable
 {
     public Transform target;
     public int maxHealth = 100;
+    public Vector2 movementSpeedMinMax;
     public float movementSpeed = 10;
 
     private int _currentHealth; 
@@ -17,6 +18,7 @@ public class EnemyController : MonoBehaviour, IDamagable
 	{
 	    _currentHealth = maxHealth;
 	    _agent = GetComponent<NavMeshAgent>();
+	    movementSpeed = Random.Range(movementSpeedMinMax.x, movementSpeedMinMax.y);
 	    _agent.speed = movementSpeed;
 	}
 	
@@ -29,7 +31,7 @@ public class EnemyController : MonoBehaviour, IDamagable
 
     private void Update()
     {
-        _agent.destination = target.position;
+        _agent.destination = target.position + target.forward * 10;
     }
 
 	public void TakeDamage(int amount)
