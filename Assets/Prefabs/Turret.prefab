@@ -209,7 +209,7 @@ MonoBehaviour:
   shouldRotate: 0
   maxRotation: 360
   minRotation: 0
-  bulletSpeed: 20000
+  bulletSpeed: 5000
   bulletDamage: 100
   fireRate: 0.1
   bulletSpread: 0.2
